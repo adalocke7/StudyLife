@@ -8,26 +8,26 @@ interface SettingsModalProps {
 }
 
 export default function SettingsModal({ visible, onClose }: SettingsModalProps) {
-  const translateX = useSharedValue(300);
+  const translateY = useSharedValue(400);
 
   useEffect(() => {
-    translateX.value = withTiming(visible ? 0 : 175, { duration: 300 });
-  }, [visible, translateX]);
+    translateY.value = withTiming(visible ? 0 : 400, { duration: 300 });
+  }, [visible, translateY]);
 
   const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ translateX: translateX.value }],
+    transform: [{ translateY: translateY.value }],
   }));
 
   return (
-    <Modal transparent visible={visible} animationType="fade" onRequestClose={onClose}>
+    <Modal transparent visible={visible} animationType="slide" onRequestClose={onClose}>
       <View style={{ flex: 1, flexDirection: 'row' }}>
         <TouchableOpacity style={{ flex: 1 }} onPress={onClose} />
-        <Animated.View style={[{ width: 175, backgroundColor: '#FED8B1', padding: 20 }, animatedStyle]}>
-          <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20, color: '#6F4E37' }}>Settings</Text>
+        <Animated.View style={[{ width: 400, backgroundColor: '#ffe8d6', padding: 20 }, animatedStyle]}>
+          <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20, color: '#6b705c' }}>Settings</Text>
           {/* Add your settings options here */}
-          <Text style={{ color: '#6F4E37' }}>Option 1</Text>
-          <Text style={{ color: '#6F4E37' }}>Option 2</Text>
-          <Text style={{ color: '#6F4E37' }}>Option 3</Text>
+          <Text style={{ color: '#6b705c' }}>Option 1</Text>
+          <Text style={{ color: '#6b705c' }}>Option 2</Text>
+          <Text style={{ color: '#6b705c' }}>Option 3</Text>
         </Animated.View>
       </View>
     </Modal>

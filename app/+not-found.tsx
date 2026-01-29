@@ -17,13 +17,13 @@ export default function NotFoundScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FED8B1',
+        backgroundColor: '#ffe8d6',
         justifyContent: 'center',
         alignItems: 'center',
     },
     button: {
         fontSize: 20,
         textDecorationLine: 'underline',
-        color: '#6F4E37',
+        color: '#6b705c',
     },
 });
