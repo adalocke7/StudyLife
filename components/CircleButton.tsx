@@ -1,10 +1,12 @@
 import { View, Pressable, StyleSheet } from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
+//Defines the types for the circle button component
 type Props = {
     onPress: () => void;
 };
 
+//Renders the circular button
 export default function CircleButton({ onPress }: Props) {
     return (
         <View style={styles.circleButtonContainer}>
@@ -15,6 +17,7 @@ export default function CircleButton({ onPress }: Props) {
     );
 }
 
+//Stylesheet
 const styles = StyleSheet.create({
     circleButtonContainer: {
         width: 84,

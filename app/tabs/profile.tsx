@@ -6,18 +6,21 @@ import TextInput from 'react-native-text-input-interactive';
 
 
 const HomeScreen = () => {
+  //Initializes the variable constants
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [repassword, setRepassword] = React.useState('');
   const [isSignup, setIsSignup] = React.useState(false);
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
+  //Render page for the profile screen
   const renderProfileScreen = () => (
     <View>
       <Text>Welcome, {username}!</Text>
     </View>
   );
 
+  //Render page for the signup screen
   const renderSignupLoginScreen = () => (
     <LoginScreen
       logoImageSource={require('../../assets/logo-example.png')}
@@ -44,6 +47,7 @@ const HomeScreen = () => {
     />
   );
 
+  //Render page for the login screen
   const renderLoginScreen = () => (
     <LoginScreen
       logoImageSource={require('../../assets/logo-example.png')}
@@ -60,6 +64,7 @@ const HomeScreen = () => {
     />
   );
 
+  //Main return function to determine which screen to show
   return (
     <View style={{flex: 1}}>
       <StatusBar barStyle="light-content" />
