@@ -6,6 +6,7 @@ import { useState } from "react";
 import IconButton from "@/components/IconButton";
 import CircleButton from "@/components/CircleButton";
 
+//Home page will be changed later, This was just for tutorial purposes
 const PlaceholderImage = require('@/assets/images/IMG_1850.jpg');
 
 export default function Index() {
@@ -63,7 +64,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292E',
+    backgroundColor: '#ffe8d6',
     alignItems: 'center',
   },
   imageContainer: {

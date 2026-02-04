@@ -1,6 +1,7 @@
 import { View, StyleSheet } from 'react-native';
 import { Link, Stack } from 'expo-router';
 
+//Displays a not found screen when the user navigates to a non-existent route
 export default function NotFoundScreen() {
     return (
         <>
@@ -14,16 +15,17 @@ export default function NotFoundScreen() {
     );
 }
 
+//Stylesheet
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#25292e',
+        backgroundColor: '#ffe8d6',
         justifyContent: 'center',
         alignItems: 'center',
     },
     button: {
         fontSize: 20,
         textDecorationLine: 'underline',
-        color: '#fff',
+        color: '#6b705c',
     },
 });
