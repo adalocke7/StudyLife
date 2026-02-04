@@ -241,7 +241,7 @@ export default function LiveTrackingScreen() {
           <>
             <Marker coordinate={routeCoords[routeCoords.length - 1]} title="You" /> 
           </>
-          //latest position marker
+        //latest position marker
         )}
         {markerCoord && (
           <Marker 
@@ -250,7 +250,7 @@ export default function LiveTrackingScreen() {
             onDragEnd={(e) => setMarkerCoord(e.nativeEvent.coordinate)} 
             title="Placed Marker" 
           />
-          //marker that can be placed by user
+        //marker that can be placed by user
         )}
       </MapView>
     </View>

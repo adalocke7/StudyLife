@@ -1,7 +1,9 @@
 import React from 'react';
-import {View, StatusBar, UIManager, Platform, Text} from 'react-native';
+import {View, StatusBar, UIManager, Platform, Text, StyleSheet} from 'react-native';
 import LoginScreen from 'react-native-login-screen';
 import TextInput from 'react-native-text-input-interactive';
+import Button from '@/components/Button';
+
 
 
 
@@ -11,12 +13,15 @@ const HomeScreen = () => {
   const [password, setPassword] = React.useState('');
   const [repassword, setRepassword] = React.useState('');
   const [isSignup, setIsSignup] = React.useState(false);
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  const [isLoggedIn, setIsLoggedIn] = React.useState(true);
 
   //Render page for the profile screen
   const renderProfileScreen = () => (
-    <View>
+    <View style={styles.profileContainer}>
       <Text>Welcome, {username}!</Text>
+      <View style={styles.logOutButtonContainer}>
+        <Button label='Log out' onPress={() => setIsLoggedIn(false)}/>
+      </View>
     </View>
   );
 
@@ -78,3 +83,19 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
+
+//Stylesheet
+const styles = StyleSheet.create({
+  profileContainer: {
+    backgroundColor:'#ffe8d6',
+    flex: 1,
+
+  },
+  logOutButtonContainer: {
+    position: 'absolute',
+    bottom: 50,
+    width: '100%',
+    alignItems: 'center',
+    verticalAlign: 'bottom',
+  },
+});
